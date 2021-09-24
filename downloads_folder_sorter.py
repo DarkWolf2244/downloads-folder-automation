@@ -52,6 +52,7 @@ def sort_folder():
     for file in downloads_path.iterdir():
         if file.is_file():
             extension = file.suffix
+            file = str(file)
             if extension in program_types:
                 move_file(file, programs_path)
             elif extension in compressed_types:
